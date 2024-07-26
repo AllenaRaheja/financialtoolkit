@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Jobs</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            background-color: #fffafa;
+            color: black;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 12px;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+        }
+        .job-box {
+            background: #e0ffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-align: center;
+            position: relative;
+        }
+        .job-box:hover {
+            background: #b0e0e6;
+        }
+        .job-box h2 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .job-box p {
+            display: none;
+            font-size: 14px;
+            color: #333;
+        }
+        .job-box.active p {
+            display: block;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .quote {
+            position: relative;
+            font-style: italic;
+            font-size: 18px;
+            color: #333;
+            background: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+        a.back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        a.back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Summer Jobs ☀️</h1>
+        <p> click on the boxes to know more! </p>
+    </header>
+    <a href="index.html" class="back-button">Back to Home</a>
+    <div class="container">
+        <div class="grid-container">
+            <div class="job-box" onclick="toggleDescription(this)">
+                <h2>Retail Associate 🛍️</h2>
+                <p>Assist customers with purchases and handle transactions. Gain experience in a fast-paced environment.</p>
+            </div>
+            <div class="job-box" onclick="toggleDescription(this)">
+                <h2>Food Service Worker 🍔</h2>
+                <p>Work in a restaurant or café, taking orders and serving food. Develop teamwork and customer service skills.</p>
+            </div>
+            <div class="job-box" onclick="toggleDescription(this)">
+                <h2>Babysitter 👶</h2>
+                <p>Care for children while parents are away. Learn responsibility and improve communication skills.</p>
+            </div>
+            <div class="job-box" onclick="toggleDescription(this)">
+                <h2>Camp Counselor ⛺</h2>
+                <p>Lead activities and supervise campers. Enhance leadership and problem-solving abilities.</p>
+            </div>
+            <div class="job-box" onclick="toggleDescription(this)">
+                <h2>Library Assistant 📚</h2>
+                <p>Help organize books and assist visitors. Develop organizational skills and provide customer service.</p>
+            </div>
+            <div class="job-box" onclick="toggleDescription(this)">
+                <h2>Internship 💼</h2>
+                <p>Gain experience in a field of interest. Ideal for exploring career paths and building a resume.</p>
+            </div>
+            <div class="job-box" onclick="toggleDescription(this)">
+                <h2>Pet Sitter 🐶</h2>
+                <p>Take care of pets while owners are away. Learn responsibility and animal care skills.</p>
+            </div>
+            <div class="job-box" onclick="toggleDescription(this)">
+                <h2>Freelance Work 🖥️</h2>
+                <p>Offer services like graphic design or writing. Flexibility to work on projects from home.</p>
+            </div>
+            <div class="job-box" onclick="toggleDescription(this)">
+                <h2>Tutor 📖</h2>
+                <p>Help students with their studies in specific subjects. Develop teaching and communication skills.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleDescription(element) {
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
